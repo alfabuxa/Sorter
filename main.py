@@ -30,12 +30,13 @@ class App(ctk.CTk):
         self.by_type_btn.pack_forget()
 
     def mode_by_date(self):
+        self.mode_frame.pack(pady=5)
         self.on_mode_selected()
         self.top_label = ctk.CTkLabel(self, text="Mode: By Date", font=("Arial", 20))
-        self.top_label.pack(side="top", pady=(0, 10))
+        self.top_label.pack(pady=(0, 0))
 
         self.select_btn = ctk.CTkButton(self, text="Select Folder", command=self.select_folder)
-        self.select_btn.pack(pady=10)
+        self.select_btn.pack(pady=5)
 
         self.folder_label = ctk.CTkLabel(self, text="No folder selected", wraplength=350)
         self.folder_label.pack(pady=5)
