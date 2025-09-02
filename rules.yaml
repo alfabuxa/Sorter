@@ -1,0 +1,4 @@
+images: ["*.png", "*.jpg", "*.jpeg"]
+documents: ["*.pdf", "*.docx", "*.txt"]
+archives: ["*.zip", "*.tar", "*.rar"]
+videos: ["*.mp4", "*.avi", "*.mkv"]
