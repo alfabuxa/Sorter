@@ -1,4 +1,25 @@
-images: ["*.png", "*.jpg", "*.jpeg"]
-documents: ["*.pdf", "*.docx", "*.txt"]
-archives: ["*.zip", "*.tar", "*.rar"]
-videos: ["*.mp4", "*.avi", "*.mkv"]
+# rules.yaml — edit me
+defaults:
+  by: date          # date = by date; ext = by extension; bucket = by bucket
+  move: false       # false = copy, true = move (remove originals)
+  dest_root: ""     # "" = inside selected folder; or set to "D:/Sorted"
+
+ignore:
+  dirs:
+    - node_modules
+    - .git
+    - __pycache__
+  patterns:
+    - "*.tmp"
+    - "*.part"
+    - "Thumbs.db"
+    - "._*"
+
+buckets:
+  Images: [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tif", ".tiff", ".webp", ".heic"]
+  Videos: [".mp4", ".mov", ".avi", ".mkv", ".wmv", ".mts", ".m4v", ".webm"]
+  Audio:  [".mp3", ".wav", ".aac", ".flac", ".m4a", ".ogg"]
+  Docs:   [".pdf", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".txt", ".rtf", ".md", ".csv"]
+  Code:   [".py", ".js", ".ts", ".java", ".c", ".cpp", ".h", ".cs", ".go", ".rs", ".rb", ".php", ".html", ".css", ".json", ".xml", ".ipynb"]
+  Archives: [".zip", ".rar", ".7z", ".tar", ".gz"]
+  # goes to "Other" if no match
